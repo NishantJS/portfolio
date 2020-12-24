@@ -1,0 +1,15 @@
+:root {
+  --primary-color: #6200ea;
+  --secondary-color: #651fff;
+  --font-color: #311b92;
+  --font-color-inverse: #ede7f6;
+  --background: #ead6ff;
+  --accent: #ff4081;
+  --active: #ede7f6;
+}
+
+[data-theme="dark"] {
+  --font-color: #ead6ff;
+  --font-color-inverse: #311b92;
+  --background: #222;
+}
