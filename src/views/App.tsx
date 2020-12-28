@@ -9,13 +9,13 @@ import "../assets/container.scss";
 import Theme from './Theme';
 import { useEffect } from 'react';
 
-function App(): JSX.Element {
+const App = (): JSX.Element => {
 
   console.info("Made with <3 by Nishant Chorge in React.JS")
 
   useEffect((): void => {
 
-    !localStorage.getItem("theme") && localStorage.setItem("theme", "light");
+    !localStorage.getItem("theme") && localStorage.setItem("theme", "dark");
 
     localStorage.getItem("theme") === "dark" ? document.documentElement.setAttribute("data-theme", "dark") : document.documentElement.setAttribute("data-theme", "");;
 

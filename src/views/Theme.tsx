@@ -1,9 +1,7 @@
 import { useState } from "react";
-import { ReactComponent as Project } from "../assets/home.svg";
+import "../assets/theme.scss";
 
-function Theme(props: any): JSX.Element {
-
-  let isDarkTheme = props.isDarkTheme;
+function Theme({ isDarkTheme }: any): JSX.Element {
 
   const [isDark, setTheme] = useState((): boolean => isDarkTheme);
 
@@ -12,7 +10,7 @@ function Theme(props: any): JSX.Element {
     let root = document.documentElement;
 
     if (isDark) {
-      root.setAttribute("data-theme", "");
+      root.removeAttribute("data-theme");
       localStorage.setItem("theme", "light")
       setTheme((): false => false);
     } else {
@@ -25,7 +23,12 @@ function Theme(props: any): JSX.Element {
 
   return (
     <div className="theme_toggle">
-      <Project onClick={updateTheme} />
+      <input type="checkbox" id="theme_checkbox" className="theme_checkbox" />
+      <label htmlFor="theme_checkbox" className={`toggle ${isDark ? "dark" : ""}`} onClick={updateTheme}>
+        <h6 className="theme_title">go {isDark ? "Light" : "Dark"}</h6>
+        <span className={`toggle_handler ${isDark ? "theme_change" : ""}`}>
+        </span>
+      </label>
     </div>
   );
 }

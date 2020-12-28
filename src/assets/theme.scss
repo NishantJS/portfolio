@@ -1,0 +1,44 @@
+@import "variables";
+
+.theme_toggle {
+  input.theme_checkbox {
+    display: none;
+  }
+
+  .toggle {
+    cursor: pointer;
+    position: relative;
+    width: 50px;
+    height: 25px;
+    border-radius: 100px;
+    background-color: $secondary;
+    display: flex;
+    align-items: center;
+
+    .theme_title {
+      position: absolute;
+      top: -20px;
+      word-wrap: none;
+      width: 55px;
+    }
+
+    .toggle_handler {
+      display: inline-block;
+      position: relative;
+      background-color: rgb(228, 229, 160);
+      z-index: 1;
+      width: 25px;
+      height: 25px;
+      border-radius: 25px;
+      transform: translateX(0%);
+      transition: transform 200ms;
+    }
+
+    .theme_change {
+      transform: translateX(100%);
+    }
+  }
+  .dark {
+    background-color: #666;
+  }
+}
