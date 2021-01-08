@@ -1,0 +1,62 @@
+@import "./variables";
+
+.about {
+  line-height: 2.5em;
+  letter-spacing: 1px;
+  font-family: $heading_font;
+
+  h3 {
+    font-weight: 400;
+  }
+
+  .hello_txt {
+    background-color: $text_color;
+    color: $text_color_inverse;
+    font-family: $heading_font;
+    padding: 5px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      left: 0;
+      bottom: 0;
+      transform: translateY(50%);
+      z-index: -1;
+      border-radius: 0 0 100%;
+      background-color: $text_color;
+    }
+  }
+
+  .imp_primary {
+    text-decoration: none;
+    color: $secondary;
+  }
+
+  button {
+    outline: none;
+    background-color: $background;
+    box-shadow: -5px 5px 0 0 $secondary;
+    transition: box-shadow 300ms;
+    border: 1px solid $secondary;
+    font-family: $heading_font;
+    letter-spacing: 2px;
+
+    &:active,
+    &:hover {
+      box-shadow: none;
+    }
+
+    a {
+      padding: 10px 20px;
+      display: block;
+      color: $text_color;
+    }
+  }
+
+  .secondary_btn {
+    margin: 0 10px;
+  }
+}

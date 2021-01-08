@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../assets/theme.scss";
+import "../styles/theme.scss";
 
 function Theme({ isDarkTheme }: any): JSX.Element {
 
@@ -22,9 +22,9 @@ function Theme({ isDarkTheme }: any): JSX.Element {
 
 
   return (
-    <div className="theme_toggle">
+    <div className="theme_toggle" aria-checked={isDark}>
       <input type="checkbox" id="theme_checkbox" className="theme_checkbox" />
-      <label htmlFor="theme_checkbox" className={`toggle ${isDark ? "dark" : ""}`} onClick={updateTheme}>
+      <label htmlFor="theme_checkbox" className={`toggle ${isDark ? "dark" : ""}`} onClick={updateTheme} title={`Switch to ${isDark ? "light" : "dark"} mode`}>
         <h6 className="theme_title">go {isDark ? "Light" : "Dark"}</h6>
         <span className={`toggle_handler ${isDark ? "theme_change" : ""}`}>
         </span>

@@ -25,13 +25,13 @@
     .toggle_handler {
       display: inline-block;
       position: relative;
-      background-color: rgb(228, 229, 160);
+      background-color: #ddf;
       z-index: 1;
       width: 25px;
-      height: 25px;
+      height: 26px;
       border-radius: 25px;
       transform: translateX(0%);
-      transition: transform 200ms;
+      transition: background-color, transform 300ms ease-out;
     }
 
     .theme_change {
@@ -40,5 +40,9 @@
   }
   .dark {
     background-color: #666;
+
+    .toggle_handler {
+      background-color: $text_darken;
+    }
   }
 }

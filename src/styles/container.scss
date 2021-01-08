@@ -4,13 +4,10 @@
   .container {
     position: relative;
     color: $text_color;
-    border: 5px solid $primary;
-    border-bottom-color: $secondary;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 0 0 10px 10px;
-    padding: 0 20px;
+    padding: 20px;
 
     .theme_toggle {
       position: absolute;
@@ -26,7 +23,8 @@
 @media (min-width: 415px) {
   .main {
     .container {
-      border-radius: 0 10px 10px 0;
+      border: 5px solid $primary;
+      border-top: 5px solid $primary;
       border-left: none;
     }
   }

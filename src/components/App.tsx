@@ -1,13 +1,14 @@
-import '../assets/main.scss';
+import '../styles/main.scss';
 import Sidebar from './Sidebar';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import About from './About';
 import Contact from './Contact';
 import Project from './Project';
 import NotFound from './NotFound';
-import "../assets/container.scss";
+import "../styles/container.scss";
 import Theme from './Theme';
 import { useEffect } from 'react';
+import Particle from './Particle';
 
 const App = (): JSX.Element => {
 
@@ -23,7 +24,7 @@ const App = (): JSX.Element => {
 
   const isDark = localStorage.getItem("theme") === "dark" ? true : false;
 
-  return (<>
+  return (
     <div className="main">
       <Router>
         <div className="sidebar">
@@ -41,8 +42,8 @@ const App = (): JSX.Element => {
           <Theme isDarkTheme={isDark} />
         </div>
       </Router>
+      <Particle />
     </div>
-  </>
   );
 }
 

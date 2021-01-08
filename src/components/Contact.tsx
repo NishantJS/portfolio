@@ -1,9 +1,9 @@
 const Contact = (): JSX.Element => {
   return (
     <div>
-      <h1>Contact</h1>
+      {/* <ContactForm /> */}
     </div>
   )
 }
 
-export default Contact
+export default Contact;
